@@ -5,8 +5,7 @@ developed by the [Local Waste Service Standards Project](http://www.localdigital
 
 ## Pre-requisites
 
-* Microsoft SQL server database to store LLPG data. EntityFramework is used to talk to SQL server and the ORM objects are based on a view called "vwFullExtract", which in
-turn depends on a table called "FullExtract". Please see the INSTALL.sql file for the SQL to create them.
+* Microsoft SQL server database to store LLPG data. Please see the INSTALL file for details on the database objects required and SQL to create them.
 * Microsoft Windows server with IIS and .NET framework 4.5 for the web server
 
 ## How it works
