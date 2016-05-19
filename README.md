@@ -1,7 +1,7 @@
 # Report a missed bin
 
 This is a demo web application designed to work with the [Waste Service Standards](http://communitiesuk.github.io/waste-service-standards/) 
-developed by the [Local Waste Service Standards Project](http://www.localdigitalcoalition.uk/product/local-waste-service-standards-project/). Developed by [Luton Borough Council}(http://www.luton.gov.uk) in partnership with our IM provider [Civica](https://www.civica.co.uk/).
+developed by the [Local Waste Service Standards Project](http://www.localdigitalcoalition.uk/product/local-waste-service-standards-project/). Developed by [Luton Borough Council](http://www.luton.gov.uk) in partnership with our IM provider [Civica](https://www.civica.co.uk/).
 
 ## Pre-requisites
 
