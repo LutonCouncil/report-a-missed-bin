@@ -1,0 +1,107 @@
+.navbar {
+    float: inherit;
+    margin: 0;
+    padding: 0;
+    height: inherit;
+    font-family: inherit;
+}
+
+div.renderbuttonstable {
+    width: 100%;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border: none
+}
+
+.navbar li a {
+    border-left: inherit;
+    border-right: none;
+    height: auto;
+    vertical-align: inherit;
+    line-height: 1.428571429;
+    padding: inherit;
+    color: #ffffff;
+    font-family: inherit;
+    font-weight: normal;
+}
+
+.navbar li .selected a, .navbar li a:focus {
+    text-decoration: underline;
+    line-height: inherit;
+}
+
+body {
+	background-color: #FFFFFF!important;
+	color: #000000!important;
+	font-family: Arial,Sans-Serif!important;
+	font-size: 12px!important;
+	line-height: 1.5em!important;
+	margin: 0!important;
+	padding: 0!important;
+    font: normal 12px Arial,Sans-Serif;
+}
+
+.top-navigation {
+line-height: 1.428571429!important;
+}
+
+.AZtitle {
+    line-height: 1.428571429!important;
+}
+
+.nav-header {
+    line-height: 1.428571429;
+}
+
+.left-navbar {
+    width: 100%;
+}
+
+.list-group-item {
+    font-weight: normal;
+}
+
+.list-inline {
+    margin-left: 0;
+}
+
+a, .jqfakelink {
+    font-weight: inherit;
+}
+
+.responsetd P, li {
+    color: white;
+}
+
+.btn-default {
+    z-index: 2;
+}
+
+.input-group-btn {
+    z-index: 2;
+}
+
+.genericsubmit {
+    font-size: 12px;
+}
+
+form .bws.colspan {
+    display: inline-block;
+    display: -moz-inline-box;
+    float: left;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.panel {
+    margin-bottom: 15px;
+}
+
+.dataelr {
+padding: 0px;
+margin-bottom: 20px;
+}

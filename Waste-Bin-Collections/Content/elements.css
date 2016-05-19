@@ -1,0 +1,284 @@
+/* 
+
+Title: Luton form styles
+Author: Liam Hawkes
+Version: 0.1 
+Description: Stylesheet to overide old Achieve forms selectors. Removes Achieve branding, improves input styles and readability/accessability. For use within iFrame. 
+
+*/
+
+/**************** Mobile Browsing **************/
+
+/* Smaller than standard 960 (devices and browsers) */
+@media handheld and (max-width: 959px) {
+    body {max-width: 958px !important;}
+    .afform {width: 100% !important;}
+    }
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media handheld and (min-width: 768px) and (max-width: 959px) {
+    body {max-width: 958px !important;}
+    .afform {width: 100% !important;}
+    }
+
+/* All Mobile Sizes (devices and browser) */
+@media handheld and (max-width: 767px) {
+    body {max-width: 765px !important;}
+    .afform {width: 100% !important;}
+    }
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media handheld and (min-width: 480px) and (max-width: 767px) {
+    body {max-width: 765px !important;}
+    .afform {width: 100% !important;}
+    }
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media handheld and (max-width: 479px) {
+    body {max-width: 478px !important;}
+    .afform {width: 100% !important;}
+    }
+
+/** STARTS - Overrides existing stylesheet to improve alignment and fixes display issues **/
+
+.dataelr {
+	padding:0px;
+}
+
+.eformstext {
+	display:none;
+}
+
+div.renderbuttonstable {
+	width: 97%;
+	margin: 0.25em 0.5em;
+	padding-top: 1em;
+	padding-bottom: 0.41em;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.renderbuttonstable .aftextinput {
+	background: #FFFFFF;
+	border: 1px solid #ccc!important;
+	color: #555;
+	font-size: 1.2em;
+	line-height: 16px;
+	height: 17px;
+	padding: 5px 5px 5px 5px;
+}
+
+.renderbuttonstable .afselectbox, .renderbuttonstable select {
+    background: #FFFFFF;
+    border: 1px solid #ccc!important;
+    color: #555;
+    font-size: 1.2em;
+    line-height: 16px;
+    padding: 5px 5px 5px 5px;
+}
+
+.nondatael {
+    padding-left: 0!important;
+}
+
+.subformel .datael {
+    padding-left: 0!important;
+}
+
+.afselectbox {
+width: 101.5%;
+}
+
+.aftextarea {
+	padding-right: 8px;
+}
+
+/** ENDs - Overrides existing stylesheet to improve alignment **/
+
+/** STARTS - New and overidden styles for input **/
+
+.renderbuttonstable .aftextinput {
+    height: 35px!important;
+    font-family: Arial, sans-serif!important;
+    font-size: 15px!important;
+    line-height: 2.1!important;
+    font-weight: 400!important;
+    text-transform: none!important;
+    width: 100%!important;
+    -webkit-box-sizing: border-box!important;
+    -moz-box-sizing: border-box!important;
+    box-sizing: border-box!important;
+    padding: 5px 8px!important;
+    background-color: #fff!important;
+    border: 1px solid #bfc1c3!important;
+    -webkit-appearance: none!important;
+    border-radius: 0!important;
+    color: #1D1D1D!important;
+}
+
+.renderbuttonstable .aftextinput:focus {
+    outline: 3px solid #95c0c4!important;
+}
+
+.helptext {
+    color: #6f777b!important;
+    line-height: .5!important;
+    margin-bottom: 5px!important;
+}
+
+.genericsubmit {
+	-moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+	box-shadow: inset 0px 0px 1px 1px #ffffff;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fd883b), color-stop(1, #fc7318) );
+	background: -moz-linear-gradient( center top, #fd883b 5%, #fc7318 100% );
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fd883b', endColorstr='#fc7318');
+	background-color: #f09a00;
+	border-radius: 5px;
+	background-image:none!important;
+	border: 1px solid #cc6520;
+	display: inline-block;
+	color: #fff !important;
+	font-weight: bold;
+	text-decoration: none !important;
+	text-align: center;
+	padding: 5px 10px;
+	background-color:#fc7318!important;
+}
+
+.genericsubmit:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff9b4f), color-stop(1, #ff872c) );
+	background:-moz-linear-gradient( center top, #ff9b4f 5%, #ff872c 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9b4f', endColorstr='#ff872c');
+	background-color:#FF9C4F!important;
+	border: 1px solid #cc6520;
+}
+
+.bws {
+    padding-right: 10px;
+}
+
+.renderbuttonstable .afselectbox, .renderbuttonstable select {
+    background: #FFFFFF;
+    border: 1px solid #bfc1c3!important;
+    color: #555;
+    font-size: 1.2em;
+    line-height: 16px;
+    padding: 5px 5px 5px 5px;
+}
+
+.afselectbox:focus {
+    outline: 3px solid #95c0c4!important;
+}
+
+.sectionnamerender {
+    font-weight: normal!important;
+    font-size: 1.3em!important;
+    color: #898989!important
+}
+
+form .progress1nonclickable {
+    background-color: #FFFFFF;
+    border: none;
+    margin-left: 0;
+    color: #000000;
+    cursor: default;
+    padding: 0;
+    text-transform: none;
+    width: auto;
+    height: auto;
+    font-weight: bold;
+    font-size: 26px;
+    margin: 0 0 30px 0;
+}
+
+.inactivenav {
+	display: none!important;
+}
+
+.warning {
+    font-size: 12px;
+    color: rgb(215, 0, 0);
+    border-top: rgb(215, 0, 0) 3px solid;
+    padding-top: 5px;
+}
+
+h2 {
+    margin: 1.2em 0 0.4em 0;
+    line-height: 1.2em;
+    border: none;
+    font-size: 1.4em;
+}
+
+.fieldlabel {
+    font-size: 14px;
+    font-family: helvetica, arial, sans-serif;
+    font-weight: bold;
+}
+
+.renderbuttonstable .afselectbox, .renderbuttonstable select {
+    margin-right: 15px;
+}
+
+.dataelr {
+    padding: 0px;
+    margin-bottom: 10px;
+}
+
+.addressconfirm {
+    margin-top: 30px!important;
+}
+
+.renderbuttonstable .aftextarea {
+    font-family: Arial, sans-serif!important;
+    font-size: 15px!important;
+    line-height: 2.1!important;
+    font-weight: 400!important;
+    text-transform: none!important;
+    width: 100%!important;
+    -webkit-box-sizing: border-box!important;
+    -moz-box-sizing: border-box!important;
+    box-sizing: border-box!important;
+    padding: 5px 8px!important;
+    background-color: #fff!important;
+    border: 1px solid #bfc1c3!important;
+    -webkit-appearance: none!important;
+    border-radius: 0!important;
+    color: #1D1D1D!important;
+}
+
+.renderbuttonstable .aftextarea:focus {
+    outline: 3px solid #95c0c4!important;
+}
+
+.referencepagetable {
+    border-bottom: none;
+}
+
+.previous {
+-moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+-webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+box-shadow: inset 0px 0px 1px 1px #ffffff;
+background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #FFFFFF), color-stop(1, #FFFFFF) );
+background: -moz-linear-gradient( center top, #fd883b 5%, #fc7318 100% );
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fd883b', endColorstr='#fc7318');
+background-color: #FFFFFF;
+border-radius: 5px;
+background-image: none!important;
+border: 1px solid #7B7B7B;
+display: inline-block;
+color: #FFF !important;
+font-weight: bold;
+text-decoration: none !important;
+text-align: center;
+padding: 5px 10px;
+background-color: #ADADAD!important;
+}}
+/** ENDS - New and overidden styles for input **/
+
+.help-label {
+    font-size: 14px;
+    font-family: helvetica, arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 0px;
+}

@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LLPGModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'LLPG.dbo.vwFullExtract' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vwFullExtract">
+          <Key>
+            <PropertyRef Name="KEYVAL" />
+            <PropertyRef Name="UPRN" />
+            <PropertyRef Name="SAO_START_SFX" />
+            <PropertyRef Name="SAO_END_SFX" />
+            <PropertyRef Name="SAO_DESC" />
+            <PropertyRef Name="SAON" />
+            <PropertyRef Name="PAO_START_SFX" />
+            <PropertyRef Name="PAO_END_SFX" />
+            <PropertyRef Name="PAO_DESC" />
+            <PropertyRef Name="PAON" />
+            <PropertyRef Name="STREET_NAME" />
+            <PropertyRef Name="LOCALITY_NAME" />
+            <PropertyRef Name="POSTAL_TOWN" />
+            <PropertyRef Name="POSTCODE" />
+            <PropertyRef Name="MAP_EAST" />
+            <PropertyRef Name="MAP_NORTH" />
+            <PropertyRef Name="ORGANISATION" />
+            <PropertyRef Name="BLPU_LOGICAL_STATUS" />
+            <PropertyRef Name="LPI_LOGICAL_STATUS" />
+            <PropertyRef Name="REL_POS_ACC" />
+            <PropertyRef Name="BLPU_Created_Date" />
+            <PropertyRef Name="BLPU_Updated_Date" />
+            <PropertyRef Name="LPI_Created_Date" />
+            <PropertyRef Name="LPI_Updated_Date" />
+          </Key>
+          <Property Name="KEYVAL" Type="nvarchar" MaxLength="13" Nullable="false" />
+          <Property Name="UPRN" Type="nvarchar" MaxLength="12" Nullable="false" />
+          <Property Name="SAO_START_NO" Type="decimal" Precision="4" Scale="0" />
+          <Property Name="SAO_START_SFX" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="SAO_END_NO" Type="decimal" Precision="4" Scale="0" />
+          <Property Name="SAO_END_SFX" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="SAO_DESC" Type="nvarchar" MaxLength="90" Nullable="false" />
+          <Property Name="SAON" Type="nvarchar" MaxLength="110" Nullable="false" />
+          <Property Name="PAO_START_NO" Type="decimal" Precision="4" Scale="0" />
+          <Property Name="PAO_START_SFX" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="PAO_END_NO" Type="decimal" Precision="4" Scale="0" />
+          <Property Name="PAO_END_SFX" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="PAO_DESC" Type="nvarchar" MaxLength="90" Nullable="false" />
+          <Property Name="PAON" Type="nvarchar" MaxLength="110" Nullable="false" />
+          <Property Name="STREET_NAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="LOCALITY_NAME" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="POSTAL_TOWN" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="POSTCODE" Type="nvarchar" MaxLength="8" Nullable="false" />
+          <Property Name="MAP_EAST" Type="nvarchar" MaxLength="7" Nullable="false" />
+          <Property Name="MAP_NORTH" Type="nvarchar" MaxLength="7" Nullable="false" />
+          <Property Name="Primary" Type="nvarchar" MaxLength="1" />
+          <Property Name="Secondary" Type="nvarchar" MaxLength="1" />
+          <Property Name="Tertiary" Type="nvarchar" MaxLength="1" />
+          <Property Name="ORGANISATION" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="BLPU_LOGICAL_STATUS" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="BLPU_STATE" Type="nvarchar" MaxLength="1" />
+          <Property Name="LPI_LOGICAL_STATUS" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="REL_POS_ACC" Type="nvarchar" MaxLength="7" Nullable="false" />
+          <Property Name="BLPU_Created_Date" Type="datetime" Nullable="false" />
+          <Property Name="BLPU_Updated_Date" Type="datetime" Nullable="false" />
+          <Property Name="LPI_Created_Date" Type="datetime" Nullable="false" />
+          <Property Name="LPI_Updated_Date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="LLPGModelStoreContainer">
+          <EntitySet Name="vwFullExtract" EntityType="Self.vwFullExtract" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vwFullExtract].[KEYVAL] AS [KEYVAL], 
+    [vwFullExtract].[UPRN] AS [UPRN], 
+    [vwFullExtract].[SAO_START_NO] AS [SAO_START_NO], 
+    [vwFullExtract].[SAO_START_SFX] AS [SAO_START_SFX], 
+    [vwFullExtract].[SAO_END_NO] AS [SAO_END_NO], 
+    [vwFullExtract].[SAO_END_SFX] AS [SAO_END_SFX], 
+    [vwFullExtract].[SAO_DESC] AS [SAO_DESC], 
+    [vwFullExtract].[SAON] AS [SAON], 
+    [vwFullExtract].[PAO_START_NO] AS [PAO_START_NO], 
+    [vwFullExtract].[PAO_START_SFX] AS [PAO_START_SFX], 
+    [vwFullExtract].[PAO_END_NO] AS [PAO_END_NO], 
+    [vwFullExtract].[PAO_END_SFX] AS [PAO_END_SFX], 
+    [vwFullExtract].[PAO_DESC] AS [PAO_DESC], 
+    [vwFullExtract].[PAON] AS [PAON], 
+    [vwFullExtract].[STREET_NAME] AS [STREET_NAME], 
+    [vwFullExtract].[LOCALITY_NAME] AS [LOCALITY_NAME], 
+    [vwFullExtract].[POSTAL_TOWN] AS [POSTAL_TOWN], 
+    [vwFullExtract].[POSTCODE] AS [POSTCODE], 
+    [vwFullExtract].[MAP_EAST] AS [MAP_EAST], 
+    [vwFullExtract].[MAP_NORTH] AS [MAP_NORTH], 
+    [vwFullExtract].[Primary] AS [Primary], 
+    [vwFullExtract].[Secondary] AS [Secondary], 
+    [vwFullExtract].[Tertiary] AS [Tertiary], 
+    [vwFullExtract].[ORGANISATION] AS [ORGANISATION], 
+    [vwFullExtract].[BLPU_LOGICAL_STATUS] AS [BLPU_LOGICAL_STATUS], 
+    [vwFullExtract].[BLPU_STATE] AS [BLPU_STATE], 
+    [vwFullExtract].[LPI_LOGICAL_STATUS] AS [LPI_LOGICAL_STATUS], 
+    [vwFullExtract].[REL_POS_ACC] AS [REL_POS_ACC], 
+    [vwFullExtract].[BLPU_Created_Date] AS [BLPU_Created_Date], 
+    [vwFullExtract].[BLPU_Updated_Date] AS [BLPU_Updated_Date], 
+    [vwFullExtract].[LPI_Created_Date] AS [LPI_Created_Date], 
+    [vwFullExtract].[LPI_Updated_Date] AS [LPI_Updated_Date]
+    FROM [dbo].[vwFullExtract] AS [vwFullExtract]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LLPGModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="vwFullExtract">
+          <Key>
+            <PropertyRef Name="KEYVAL" />
+            <PropertyRef Name="UPRN" />
+            <PropertyRef Name="SAO_START_SFX" />
+            <PropertyRef Name="SAO_END_SFX" />
+            <PropertyRef Name="SAO_DESC" />
+            <PropertyRef Name="SAON" />
+            <PropertyRef Name="PAO_START_SFX" />
+            <PropertyRef Name="PAO_END_SFX" />
+            <PropertyRef Name="PAO_DESC" />
+            <PropertyRef Name="PAON" />
+            <PropertyRef Name="STREET_NAME" />
+            <PropertyRef Name="LOCALITY_NAME" />
+            <PropertyRef Name="POSTAL_TOWN" />
+            <PropertyRef Name="POSTCODE" />
+            <PropertyRef Name="MAP_EAST" />
+            <PropertyRef Name="MAP_NORTH" />
+            <PropertyRef Name="ORGANISATION" />
+            <PropertyRef Name="BLPU_LOGICAL_STATUS" />
+            <PropertyRef Name="LPI_LOGICAL_STATUS" />
+            <PropertyRef Name="REL_POS_ACC" />
+            <PropertyRef Name="BLPU_Created_Date" />
+            <PropertyRef Name="BLPU_Updated_Date" />
+            <PropertyRef Name="LPI_Created_Date" />
+            <PropertyRef Name="LPI_Updated_Date" />
+          </Key>
+          <Property Name="KEYVAL" Type="String" MaxLength="13" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UPRN" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SAO_START_NO" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="SAO_START_SFX" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SAO_END_NO" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="SAO_END_SFX" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SAO_DESC" Type="String" MaxLength="90" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SAON" Type="String" MaxLength="110" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PAO_START_NO" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="PAO_START_SFX" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PAO_END_NO" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="PAO_END_SFX" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PAO_DESC" Type="String" MaxLength="90" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PAON" Type="String" MaxLength="110" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="STREET_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LOCALITY_NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="POSTAL_TOWN" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="POSTCODE" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MAP_EAST" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MAP_NORTH" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Primary" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Secondary" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Tertiary" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ORGANISATION" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BLPU_LOGICAL_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BLPU_STATE" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="LPI_LOGICAL_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="REL_POS_ACC" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BLPU_Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="BLPU_Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LPI_Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LPI_Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="LLPGEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="vwFullExtracts" EntityType="Self.vwFullExtract" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LLPGModelStoreContainer" CdmEntityContainer="LLPGEntities">
+          <EntitySetMapping Name="vwFullExtracts">
+            <EntityTypeMapping TypeName="LLPGModel.vwFullExtract">
+              <MappingFragment StoreEntitySet="vwFullExtract">
+                <ScalarProperty Name="KEYVAL" ColumnName="KEYVAL" />
+                <ScalarProperty Name="UPRN" ColumnName="UPRN" />
+                <ScalarProperty Name="SAO_START_NO" ColumnName="SAO_START_NO" />
+                <ScalarProperty Name="SAO_START_SFX" ColumnName="SAO_START_SFX" />
+                <ScalarProperty Name="SAO_END_NO" ColumnName="SAO_END_NO" />
+                <ScalarProperty Name="SAO_END_SFX" ColumnName="SAO_END_SFX" />
+                <ScalarProperty Name="SAO_DESC" ColumnName="SAO_DESC" />
+                <ScalarProperty Name="SAON" ColumnName="SAON" />
+                <ScalarProperty Name="PAO_START_NO" ColumnName="PAO_START_NO" />
+                <ScalarProperty Name="PAO_START_SFX" ColumnName="PAO_START_SFX" />
+                <ScalarProperty Name="PAO_END_NO" ColumnName="PAO_END_NO" />
+                <ScalarProperty Name="PAO_END_SFX" ColumnName="PAO_END_SFX" />
+                <ScalarProperty Name="PAO_DESC" ColumnName="PAO_DESC" />
+                <ScalarProperty Name="PAON" ColumnName="PAON" />
+                <ScalarProperty Name="STREET_NAME" ColumnName="STREET_NAME" />
+                <ScalarProperty Name="LOCALITY_NAME" ColumnName="LOCALITY_NAME" />
+                <ScalarProperty Name="POSTAL_TOWN" ColumnName="POSTAL_TOWN" />
+                <ScalarProperty Name="POSTCODE" ColumnName="POSTCODE" />
+                <ScalarProperty Name="MAP_EAST" ColumnName="MAP_EAST" />
+                <ScalarProperty Name="MAP_NORTH" ColumnName="MAP_NORTH" />
+                <ScalarProperty Name="Primary" ColumnName="Primary" />
+                <ScalarProperty Name="Secondary" ColumnName="Secondary" />
+                <ScalarProperty Name="Tertiary" ColumnName="Tertiary" />
+                <ScalarProperty Name="ORGANISATION" ColumnName="ORGANISATION" />
+                <ScalarProperty Name="BLPU_LOGICAL_STATUS" ColumnName="BLPU_LOGICAL_STATUS" />
+                <ScalarProperty Name="BLPU_STATE" ColumnName="BLPU_STATE" />
+                <ScalarProperty Name="LPI_LOGICAL_STATUS" ColumnName="LPI_LOGICAL_STATUS" />
+                <ScalarProperty Name="REL_POS_ACC" ColumnName="REL_POS_ACC" />
+                <ScalarProperty Name="BLPU_Created_Date" ColumnName="BLPU_Created_Date" />
+                <ScalarProperty Name="BLPU_Updated_Date" ColumnName="BLPU_Updated_Date" />
+                <ScalarProperty Name="LPI_Created_Date" ColumnName="LPI_Created_Date" />
+                <ScalarProperty Name="LPI_Updated_Date" ColumnName="LPI_Updated_Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

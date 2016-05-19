@@ -1,0 +1,233 @@
+.project>h1,
+h2,
+h3,
+h4,
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.filter-bins {
+    padding: 25px 25px 20px 25px;
+    background-color: #D4E7E8;
+    margin: 25px 0 35px 0;
+}
+
+.filter-bins label {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    color: #3A6A6D;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.project .form-control {
+    font-family: 'Source Sans Pro', sans-serif;
+    border: 2px solid #95c0c4;
+    border-radius: 0;
+    height: 40px;
+    box-shadow: none;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.form-control:focus {
+    border: 2px solid #3b6a6e;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+
+/* 
+- Style each label that is directly after the input
+- position: relative; will ensure that any position: absolute children will position themselves in relation to it
+*/
+
+input[type=checkbox] + label {
+    height: 40px;
+    width: 40px;
+    display: block;
+    border-radius: 0;
+    position: relative;
+    transition: all 0.4s;
+    border: solid 3px #FFF;
+    cursor: pointer;
+    /* Soften the jagged edge */
+}
+
+
+/* Provide a border when hovered and when the checkbox before it is checked */
+
+input[type=checkbox] + label:hover,
+input[type=checkbox]:checked + label {
+    border: solid 3px #3A6A6D;
+    /* Soften the jagged edge */
+}
+
+.checkbox-inline {
+    padding-left: 0px;
+}
+
+#black {
+    background: url(../img/black.png) no-repeat;
+}
+
+#green {
+    background: url(../img/green.png) no-repeat;
+}
+
+#brown {
+    background: url(../img/brown.png) no-repeat;
+}
+
+#glass {
+    background: url(../img/glass.png) no-repeat;
+}
+
+.panel-info {
+    border: none;
+    box-shadow: none;
+}
+
+.panel-info>.panel-heading {
+    color: #3B6A6E;
+    background-color: #D4E7E8;
+    border: none;
+    border-radius: 0;
+    padding-top: 15px;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+.panel-info .panel-body {
+    background-color: #FAFAFA;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.panel-info .panel-body h3 {
+    font-size: 18px;
+    color: #000000;
+    font-weight: 600;
+    margin-top: 0px;
+}
+
+.panel-info .panel-body h4 {
+    font-size: 14px;
+    color: #444444;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.panel-info>.panel-footer {
+    color: #444444;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 0;
+    padding-top: 15px;
+    font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    float: right;
+    padding-bottom: 15px;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #3b6a6e;
+    border: none;
+    border-radius: 0;
+    border-bottom: 3px solid #284B4E;
+    font-size: 16px;
+    padding: 10px 15px;
+    margin-left: 20px;
+}
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info {
+    color: #fff;
+    background-color: #19494d;
+    border: none;
+    border-radius: 0;
+    border-bottom: 3px solid #052326;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #525252;
+    border: none;
+    border-radius: 0;
+    border-bottom: 3px solid #242424;
+    font-size: 16px;
+    padding: 10px 15px;
+    margin-left: 20px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-info {
+    color: #fff;
+    background-color: #2c2c2c;
+    border: none;
+    border-radius: 0;
+    border-bottom: 3px solid #0b0b0b;
+}
+
+.modal-content {
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.modal-content p {
+    font-size: 14px;
+    color: #444444;
+}
+
+.modal-header {
+    color: #3B6A6E;
+    background-color: #D4E7E8;
+    border: none;
+    border-radius: 0;
+    padding-top: 15px;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+.modal-title {
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    color: #3B6A6E;
+}
+
+.modal-footer label {
+    font-weight: 500;
+    color: #444444;
+}
+
+.has-error .form-control {
+    border-color: #a94442!important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.help-block {
+    margin-bottom: 0px;
+}
+
+@media(max-width:768px) {
+    .filter-bins {
+        padding: 25px 0px 20px 0px;
+    }
+}

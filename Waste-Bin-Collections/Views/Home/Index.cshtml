@@ -1,0 +1,105 @@
+﻿@section scripts {
+    @Scripts.Render("~/bundles/angular-app")
+}
+
+
+<div class="project" data-ng-controller="BinController as ctrl">
+
+
+    <div class="row" style="margin-left:0px; margin-right:0px;" data-ng-cloak>
+        <div class="col-md-12 filter-bins">
+            <form>
+                <div class="form-group col-md-4" data-ng-class="{'has-error': ctrl.visibility.showError.roadOrPostCode}">
+                    <label for="roadOrPostCode" class="control-label">Road name or postcode</label><img class="pull-right" src="Content/images/loading.svg" data-ng-show="ctrl.visibility.searchingForAddresses">
+                    <input type="text" value="" class="form-control" placeholder="" id="roadOrPostCode" data-ng-model="ctrl.roadOrPostCode" data-ng-model-options="{debounce: 300}" data-ng-change="ctrl.findAddress(ctrl.roadOrPostCode)">
+                    <span id="helpBlockRoad" class="help-block" data-ng-show="ctrl.visibility.showError.roadOrPostCode">{{ctrl.errorMessage.roadOrPostCode}}</span>
+                </div>
+                <div class="form-group col-md-4" data-ng-show="ctrl.visibility.showAddressList" data-ng-class="{'has-error': ctrl.visibility.showError.addressList}">
+                    <label for="addresses" class="control-label">Select your address</label><img class="pull-right" src="Content/images/loading.svg" data-ng-show="ctrl.visibility.searchingForBinInfo">
+                    <select id="addresses" name="addresses" class="form-control" data-ng-model="ctrl.selectedAddress" data-ng-options="option.StreetName for option in ctrl.addressList track by option.Id" data-ng-change="ctrl.findBinInfo(ctrl.selectedAddress)">
+                        <option value="">Please select</option>
+                    </select>
+                    <span id="helpBlockAddress" class="help-block" data-ng-show="ctrl.visibility.showError.addressList">{{ctrl.errorMessage.addressList}}</span>
+                </div>
+                <div class="form-group col-md-4" data-ng-show="ctrl.visibility.showBinInfo">
+                    <label for="bins" class="control-label">Select a bin</label>
+                    <select id="bins" name="bins" class="form-control" data-ng-model="ctrl.selectedBin" data-ng-options="option.feature_types[0].name + ' (' + option.name + ')' for option in ctrl.binInfo track by option.uprn + option.name">
+                        <option value="">Please select</option>
+                    </select>
+                </div>
+            </form>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+
+    <div class="row" data-ng-show="ctrl.selectedBin != null" data-ng-cloak>
+        <div class="col-md-12">
+            <div class="panel panel-info">
+                <!-- Default panel contents -->
+                <div class="panel-heading">{{ctrl.selectedBin.feature_types[0].name}} - {{ctrl.selectedBin.name}} <span class="pull-right" style="font-weight:500;">Collected - {{ctrl.calcCollectionFrequency(ctrl.selectedBin.last_collections[ctrl.selectedBin.last_collections.length - 1].scheduled_start_date, ctrl.selectedBin.next_collections[0].scheduled_start_date)}}</span></div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h4>Last collection</h4>
+                            <h3>{{ctrl.selectedBin.last_collections[ctrl.selectedBin.last_collections.length - 1].scheduled_start_date  | date : 'h:mma EEEE d MMMM yyyy'}}</h3>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Status</h4>
+                            <h3>{{ctrl.selectedBin.last_collections[ctrl.selectedBin.last_collections.length - 1].status}}</h3>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Further information</h4>
+                            <h3>{{ctrl.selectedBin.description}}</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h4>Next collection</h4>
+                            <h3>{{ctrl.selectedBin.next_collections[0].scheduled_start_date | date : 'EEEE d MMMM yyyy'}}</h3>
+                        </div>
+                        <div class="col-md-8">
+                        </div>
+                    </div>
+                </div>
+                <!-- End of panel contents -->
+
+                <div class="panel-footer">
+                    Was your bin missed?
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Request collection</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Request collection</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p><strong>Option 1</strong></p>
+                                    <p>Select collect my bin, leave it out and we'll empty it within the next 2 working days.</p>
+                                    <br>
+                                    <p><strong>Option 2</strong></p>
+                                    <p>Each time we go out again, it costs an extra £25 that could be spent on other services.</br>If you can wait until {{ctrl.selectedBin.next_collections[0].scheduled_start_date | date : 'EEEE d MMMM'}} let us know. We'll tell the crew it was missed and ask them to be extra vigilant in the future.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="name" class="control-label pull-left">If you would like updates, please enter your email address</label>
+                                            <input value="" class="form-control" id="name" placeholder="Email address" type="email">
+                                        </div>
+                                    </form>
+                                    <button type="button" class="btn btn-primary">Collect my bin</button>
+                                    <button type="button" class="btn btn-info" data-dismiss="modal">I'll wait until my next collection</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Modal -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
