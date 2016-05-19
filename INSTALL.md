@@ -5,7 +5,8 @@ turn depends on a table called "FullExtract".
 
 ## Create FullExtract table:
 
-`/****** Object:  Table [dbo].[FullExtract]    Script Date: 19/05/2016 14:33:07 ******/
+```
+/****** Object:  Table [dbo].[FullExtract]    Script Date: 19/05/2016 14:33:07 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -47,11 +48,13 @@ CREATE TABLE [dbo].[FullExtract](
 	[LPI_Updated_Date] [datetime] NOT NULL
 ) ON [PRIMARY]
 
-GO`
+GO
+```
 
 ## Create vwFullExtract view:
 
-`/****** Object:  View [dbo].[vwFullExtract]    Script Date: 19/05/2016 14:33:32 ******/
+```
+/****** Object:  View [dbo].[vwFullExtract]    Script Date: 19/05/2016 14:33:32 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -63,4 +66,5 @@ AS
 SELECT        dbo.FullExtract.*
 FROM            dbo.FullExtract
 
-GO`
+GO
+```
